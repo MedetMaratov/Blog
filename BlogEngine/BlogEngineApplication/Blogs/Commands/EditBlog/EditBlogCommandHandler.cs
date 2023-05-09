@@ -34,6 +34,7 @@ namespace BlogEngineApplication.Blogs.Commands.EditBlog
             blogForEdit.Description = request.Description;
             blogForEdit.Image = request.Image;
             blogForEdit.Edited = DateTime.Now;
+            blogForEdit.Category = request.Categories;
 
             await _dbContext.SaveChangesAsync(cancellationToken);
         }

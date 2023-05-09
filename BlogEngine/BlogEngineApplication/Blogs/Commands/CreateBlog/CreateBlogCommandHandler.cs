@@ -26,7 +26,7 @@ namespace BlogEngineApplication.Blogs.Commands.CreateBlog
                 Name = request.Title,
                 CreatorId = request.UserId,
                 Description = request.Description,
-                Created = DateTime.Now,
+                Created = DateTime.UtcNow,
                 Edited = null,
                 Image = request.Image,
                 Posts = new List<Post>(),

@@ -15,6 +15,7 @@ namespace BlogEngine.Domain.Entities
         public Guid BlogId { get; set; }
         public Blog Blog { get; set; }
         public List<PostTag> Tags { get; set; }
+        public List<Comment> Comments { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime EditedAt { get; set; }
     }

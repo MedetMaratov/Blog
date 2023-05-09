@@ -6,15 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogEngineApplication.Blogs.Commands.EditBlog
+namespace BlogEngineApplication.Posts.Commands.Create
 {
-    public class EditeBlogCommand : IRequest
+    public class CreatePostCommand : IRequest
     {
         public Guid UserId { get; set; }
         public Guid BlogId { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
-        public string Image { get; set; }
-        public List<BlogCategory> Categories { get; set; }
+        public string Content { get; set; }
+        public List<PostTag> Tags { get; set; }
     }
 }
