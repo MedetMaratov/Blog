@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using BlogEngineApplication.Interfaces;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Blogs.Queries.GetBlogsList.All
 {
-    public class GetAllBlogListQuerieHandler
+    public class GetAllBlogListQuerieHandler : IRequestHandler<GetAllBlogsListQuery,BlogListVM>
     {
         private readonly IBlogDbContext _dbContext;
         private readonly IMapper _mapper;
@@ -21,7 +22,7 @@ namespace BlogEngineApplication.Blogs.Queries.GetBlogsList.All
             _mapper = mapper;
         }
 
-        public async Task<BlogListVM> Handle(CancellationToken cancellationToken)
+        public async Task<BlogListVM> Handle(GetAllBlogsListQuery request, CancellationToken cancellationToken)
         {
             var blogs = await _dbContext
                 .Blogs
