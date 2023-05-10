@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlogEngine.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BlogEngine.Web.props",
+      "PackagePath": "build\\BlogEngine.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BlogEngine.Web.props",
+      "PackagePath": "buildMultiTargeting\\BlogEngine.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BlogEngine.Web.props",
+      "PackagePath": "buildTransitive\\BlogEngine.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

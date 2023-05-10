@@ -17,7 +17,7 @@ namespace BlogEngineApplication.Tags.Create
         {
             _dbContext = dbContext;
         }
-        public async Task Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task Handle(CreateTagCommand request, CancellationToken cancellationToken)
         {
             var tag = new PostTag
             {

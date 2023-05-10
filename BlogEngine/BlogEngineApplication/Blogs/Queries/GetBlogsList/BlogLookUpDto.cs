@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BlogEngine.Domain.Entities;
+using BlogEngineApplication.Common.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Blogs.Queries.GetBlogsList
 {
-    public class BlogLookupDto
+    public class BlogLookupDto : IMapWith<Blog>
     {
         public Guid Id { get; set; }
         public string Title { get; set; }

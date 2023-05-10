@@ -18,7 +18,7 @@ namespace BlogEngine.Persistence
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Subscription> Subsсription { get; set; }
 
-        public BlogDbContext(DbContextOptions options)
+        public BlogDbContext(DbContextOptions<BlogDbContext> options)
             : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "B1xYJ/70M5Vhq4XSJxBEvVBVuOALcoB9ugG+POhYDQU=",
+  "Source": "BlogEngine.Web",
+  "BasePath": "_content/BlogEngine.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BlogEngine.Web\\wwwroot",
+      "Source": "BlogEngine.Web",
+      "ContentRoot": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\",
+      "BasePath": "_content/BlogEngine.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\favicon.ico",
+      "SourceId": "BlogEngine.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\",
+      "BasePath": "_content/BlogEngine.Web",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

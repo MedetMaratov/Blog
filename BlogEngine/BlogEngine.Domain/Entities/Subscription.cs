@@ -8,6 +8,6 @@ namespace BlogEngine.Domain.Entities
         public Guid UserId { get; set; }
         [ForeignKey("Blog")]
         public Guid BlogId { get; set; }
-        public Post Blog { get; set; }
+        public Blog Blog { get; set; }
     }
 }

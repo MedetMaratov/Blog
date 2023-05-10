@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Common.Mapping
 {
-    public class AssemblyMappingProfile
+    public class AssemblyMappingProfile : Profile
     {
         public AssemblyMappingProfile(Assembly assembly) =>
             ApplyMappingFromAssembly(assembly);
