@@ -19,7 +19,7 @@ namespace BlogEngineApplication.Posts.Commands.Create
             _dbContext = dbContext;
         }
 
-        public async Task Handle(CreatePostCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreatePostCommand request, CancellationToken cancellationToken)
         {
             var blogToPost = await _dbContext.Blogs
                 .FindAsync(new object[] { request.BlogId }, cancellationToken);
@@ -44,6 +44,7 @@ namespace BlogEngineApplication.Posts.Commands.Create
             };
             blogToPost.Posts.Add(post);
             await _dbContext.SaveChangesAsync(cancellationToken);
+            return blogToPost.Id;
         }
     }
 }

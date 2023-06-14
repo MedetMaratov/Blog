@@ -22,9 +22,7 @@ namespace BlogEngine.Web.Models
                 .ForMember(blogCommand => blogCommand.Image,
                 opt => opt.MapFrom(blogDto => blogDto.Image))
                 .ForMember(blogCommand => blogCommand.Categories,
-                opt => opt.MapFrom(blogDto => blogDto.Categories));
-
-                
+                opt => opt.MapFrom(blogDto => blogDto.Categories));              
         }
     }
 }

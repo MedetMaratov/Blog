@@ -79,5 +79,3 @@ C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\BlogEngine.Web.staticwebassets.runtime.json
-C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\obj\Debug\net7.0\BlogEngine.Web.RazorAssemblyInfo.cache
-C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\obj\Debug\net7.0\BlogEngine.Web.RazorAssemblyInfo.cs

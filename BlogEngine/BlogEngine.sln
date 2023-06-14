@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogEngineApplication", "Bl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CB923933-CDA7-4473-B1CB-02C08DC971BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogEngine.Web", "BlogEngine.Web\BlogEngine.Web.csproj", "{E9DFD69C-7574-4F46-82E0-E9B510D84B05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogEngine.Web", "BlogEngine.Web\BlogEngine.Web.csproj", "{E9DFD69C-7574-4F46-82E0-E9B510D84B05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
