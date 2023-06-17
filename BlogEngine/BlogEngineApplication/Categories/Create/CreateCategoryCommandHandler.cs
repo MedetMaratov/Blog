@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Categories.Create
 {
-    public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand>
+    public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, Guid>
     {
         private readonly IBlogDbContext _dbContext;
 
@@ -18,7 +18,7 @@ namespace BlogEngineApplication.Categories.Create
             _dbContext = dbContext;
         }
 
-        public async Task Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
             var category = new BlogCategory
             {
@@ -27,6 +27,7 @@ namespace BlogEngineApplication.Categories.Create
             };
             _dbContext.BlogCategories.Add(category);
             await _dbContext.SaveChangesAsync(cancellationToken);
+            return category.Id;
         }
     }
 }

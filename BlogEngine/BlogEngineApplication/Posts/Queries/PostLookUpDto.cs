@@ -13,7 +13,7 @@ namespace BlogEngineApplication.Posts.Queries
     {
         public string Title { get; set; }
         public string Content { get; set; }
-        public List<PostTag> Tags { get; set; }
+        public List<string> Tags { get; set; }
         public List<Comment> Comments { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime EditedAt { get; set; }

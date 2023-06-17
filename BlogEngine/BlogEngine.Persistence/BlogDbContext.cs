@@ -13,7 +13,7 @@ namespace BlogEngine.Persistence
     {
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
-        public DbSet<PostTag> PostTags { get; set; }
+        public DbSet<string> PostTags { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Subscription> Subsсription { get; set; }

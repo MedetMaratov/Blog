@@ -9,7 +9,7 @@ namespace BlogEngine.Web.Models
     {
         public string Title { get; set; }
         public string Content { get; set; }
-        public List<PostTag> Tags { get; set; }
+        public List<string> Tags { get; set; }
 
         public void Mapping(Profile profile)
         {

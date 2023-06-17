@@ -12,7 +12,7 @@ namespace BlogEngineApplication.Interfaces
     {
         DbSet<Blog> Blogs { get; set; }
         DbSet<BlogCategory> BlogCategories { get; set; }
-        DbSet<PostTag> PostTags { get; set; }
+        DbSet<string> PostTags { get; set; }
         DbSet<Post> Posts { get; set; }
         DbSet<Comment> Comments { get; set; }
         DbSet<Subscription> Subsсription { get; set; }

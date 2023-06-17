@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Categories.Create
 {
-    public class CreateCategoryCommand : IRequest
+    public class CreateCategoryCommand : IRequest<Guid>
     {
-        public Guid Id { get; set; }
         public String Name { get; set; }
     }
 }

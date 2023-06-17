@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Comments.Commands.Create
 {
-    public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand>
+    public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Guid>
     {
         private readonly IBlogDbContext _dbContext;
 
@@ -20,7 +20,7 @@ namespace BlogEngineApplication.Comments.Commands.Create
             _dbContext = dbContext;
         }
 
-        public async Task Handle(CreateCommentCommand request,
+        public async Task<Guid> Handle(CreateCommentCommand request,
             CancellationToken cancellationToken)
         {
             var post = await _dbContext
@@ -44,6 +44,7 @@ namespace BlogEngineApplication.Comments.Commands.Create
 
             post.Comments.Add(comment);
             await _dbContext.SaveChangesAsync(cancellationToken);
+            return comment.Id;
         }
 
     }

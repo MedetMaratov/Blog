@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Comments.Commands.Create
 {
-    public class CreateCommentCommand : IRequest
+    public class CreateCommentCommand : IRequest<Guid>
     {
         public string Content { get; set; }
         public Guid UserId { get; set; }

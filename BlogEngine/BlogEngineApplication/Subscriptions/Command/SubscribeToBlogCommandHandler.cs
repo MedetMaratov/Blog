@@ -11,16 +11,16 @@ using System.Threading.Tasks;
 
 namespace BlogEngine.Application.Subscriptions.Command
 {
-    public class SubscribeCommandHandler : IRequestHandler<SubscribeCommand>
+    public class SubscribeToBlogCommandHandler : IRequestHandler<SubscribeToBlogCommand>
     {
         private readonly IBlogDbContext _dbContext;
 
-        public SubscribeCommandHandler(IBlogDbContext dbContext)
+        public SubscribeToBlogCommandHandler(IBlogDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public async Task Handle(SubscribeCommand request, CancellationToken cancellationToken)
+        public async Task Handle(SubscribeToBlogCommand request, CancellationToken cancellationToken)
         {
             var subscription = new Subscription
             {
