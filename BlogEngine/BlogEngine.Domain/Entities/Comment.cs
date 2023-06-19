@@ -16,6 +16,5 @@ namespace BlogEngine.Domain.Entities
         public Guid PostId { get; set; }
         public Post Post { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime EditedAt { get; set; }
     }
 }

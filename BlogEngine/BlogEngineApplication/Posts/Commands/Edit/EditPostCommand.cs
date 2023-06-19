@@ -14,6 +14,6 @@ namespace BlogEngineApplication.Posts.Commands.Edit
         public Guid UserID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public List<string> Tags { get; set; }
+        public List<PostTag> Tags { get; set; }
     }
 }

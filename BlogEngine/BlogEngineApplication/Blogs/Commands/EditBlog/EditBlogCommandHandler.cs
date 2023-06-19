@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Blogs.Commands.EditBlog
 {
-    public class EditeBlogCommandHandler : IRequestHandler<EditeBlogCommand>
+    public class EditBlogCommandHandler : IRequestHandler<EditeBlogCommand>
     {
         private readonly IBlogDbContext _dbContext;
 
-        public EditeBlogCommandHandler(IBlogDbContext dbContext)
+        public EditBlogCommandHandler(IBlogDbContext dbContext)
         {
             _dbContext = dbContext;
         }
