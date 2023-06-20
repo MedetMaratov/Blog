@@ -10,6 +10,7 @@ namespace BlogEngine.Tests.Common
         public static Guid UserAId = Guid.NewGuid();
         public static Guid UserBId = Guid.NewGuid();
 
+        public static Guid BlogBId = Guid.Parse("4014D72B-4B32-44F2-93E1-1A38AEE9C959");
         public static Guid BlogIdForDelete = Guid.NewGuid();
         public static Guid BlogIdForUpdate = Guid.NewGuid();
         public static Guid BlogIdForWrongUserIdTest = Guid.Parse("A6BB65BB-5AC2-4AFA-8A28-2616F675B825");
@@ -43,7 +44,7 @@ namespace BlogEngine.Tests.Common
                 Created = DateTime.Today,
                 Description = "DescriptionA",
                 Edited = null,
-                Id = Guid.Parse("4014D72B-4B32-44F2-93E1-1A38AEE9C959"),
+                Id = BlogBId,
                 Name = "Name2",
                 Posts = new List<Post>(),
                 Category = new List<BlogCategory>(),
@@ -135,6 +136,9 @@ namespace BlogEngine.Tests.Common
                 Id = Guid.Parse("A3BB25C6-9898-4728-B618-5EA9C6350522"),
                 Name = "CategoryB",
             };
+
+            var subscription1 = new Subscription { UserId = UserAId, BlogId = blogA.Id };
+            var subscription2 = new Subscription { UserId = UserAId, BlogId = blogB.Id };
             postA.Comments.Add(commentA);
             postA.Tags.Add(tagA);
             postB.Comments.Add(commentB);
@@ -144,6 +148,7 @@ namespace BlogEngine.Tests.Common
             blogB.Posts.Add(postB);
             blogB.Category.Add(categoryB);
             context.Blogs.AddRange(blogA, blogB, blogForDelete, blogForUpdate);
+            context.Subsсription.AddRange(subscription1, subscription2);
             context.SaveChanges();
             return context;
         }
