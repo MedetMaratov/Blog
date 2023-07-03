@@ -39,12 +39,12 @@ namespace BlogEngineApplication.Posts.Commands.Create
                 CreatorId = request.UserId,
                 CreatedAt = DateTime.UtcNow,
                 Comments = new List<Comment>(),
-                BlogId = request.BlogId,
+                Blog = blogToPost,
                 Tags = request.Tags
             };
-            blogToPost.Posts.Add(post);
+            await _dbContext.Posts.AddAsync(post);
             await _dbContext.SaveChangesAsync(cancellationToken);
-            return blogToPost.Id;
+            return post.Id;
         }
     }
 }

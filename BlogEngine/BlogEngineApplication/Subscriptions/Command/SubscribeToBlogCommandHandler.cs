@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngine.Application.Subscriptions.Command
 {
-    public class SubscribeToBlogCommandHandler : IRequestHandler<SubscribeToBlogCommand>
+    public class SubscribeToBlogCommandHandler : IRequestHandler<SubscribeToBlogCommand, Guid>
     {
         private readonly IBlogDbContext _dbContext;
 
@@ -20,7 +20,7 @@ namespace BlogEngine.Application.Subscriptions.Command
             _dbContext = dbContext;
         }
 
-        public async Task Handle(SubscribeToBlogCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(SubscribeToBlogCommand request, CancellationToken cancellationToken)
         {
             var subscription = new Subscription
             {
@@ -31,6 +31,7 @@ namespace BlogEngine.Application.Subscriptions.Command
 
             await _dbContext.Subsсription.AddAsync(subscription, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
+            return subscription.Id;
         }
     }
 }

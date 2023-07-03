@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngine.Application.Subscriptions.Command
 {
-    public class SubscribeToBlogCommand : IRequest
+    public class SubscribeToBlogCommand : IRequest<Guid>
     {
         public Guid UserId { get; set; }
         public Guid BlogId { get; set; }

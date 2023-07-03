@@ -14,8 +14,10 @@ namespace BlogEngine.Tests.Common
         public static Guid BlogIdForDelete = Guid.NewGuid();
         public static Guid BlogIdForUpdate = Guid.NewGuid();
         public static Guid BlogIdForWrongUserIdTest = Guid.Parse("A6BB65BB-5AC2-4AFA-8A28-2616F675B825");
+
         public static Guid PostIdForDelete = Guid.NewGuid();
         public static Guid PostIdForUpdate = Guid.NewGuid();
+        public static Guid PostAId = Guid.NewGuid();
 
         public static Guid CommentIdForDelete = Guid.NewGuid();
 
@@ -75,7 +77,7 @@ namespace BlogEngine.Tests.Common
             };
             var postA = new Post
             {
-                Id = Guid.Parse("45A3FA76-C5D5-4FDF-90BC-2DDC75FE0A6B"),
+                Id = PostAId,
                 CreatorId = UserAId,
                 BlogId = blogA.Id,
                 Title = "TitleA",
@@ -92,6 +94,30 @@ namespace BlogEngine.Tests.Common
                 BlogId = blogB.Id,
                 Title = "TitleB",
                 Content = "ContentB",
+                Comments = new List<Comment>(),
+                Tags = new List<PostTag>(),
+                CreatedAt = DateTime.Today,
+                EditedAt = null
+            };
+            var postForDelete = new Post
+            {
+                Id = PostIdForDelete,
+                CreatorId = UserBId,
+                BlogId = BlogBId,
+                Title = "For delete",
+                Content = "For delete",
+                Comments = new List<Comment>(),
+                Tags = new List<PostTag>(),
+                CreatedAt = DateTime.Today,
+                EditedAt = null
+            };
+            var postForUpdate = new Post
+            {
+                Id = PostIdForUpdate,
+                CreatorId = UserBId,
+                BlogId = BlogBId,
+                Title = "For update",
+                Content = "For update",
                 Comments = new List<Comment>(),
                 Tags = new List<PostTag>(),
                 CreatedAt = DateTime.Today,
@@ -139,13 +165,17 @@ namespace BlogEngine.Tests.Common
 
             var subscription1 = new Subscription { UserId = UserAId, BlogId = blogA.Id };
             var subscription2 = new Subscription { UserId = UserAId, BlogId = blogB.Id };
+
             postA.Comments.Add(commentA);
             postA.Tags.Add(tagA);
             postB.Comments.Add(commentB);
             postB.Tags.Add(tagB);
             blogA.Posts.Add(postA);
-            blogA.Category.Add(categoryA);
+            blogB.Posts.Add(postForDelete);
             blogB.Posts.Add(postB);
+            blogB.Posts.Add(postForUpdate);
+
+            blogA.Category.Add(categoryA);
             blogB.Category.Add(categoryB);
             context.Blogs.AddRange(blogA, blogB, blogForDelete, blogForUpdate);
             context.Subsсription.AddRange(subscription1, subscription2);
