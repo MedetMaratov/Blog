@@ -79,3 +79,12 @@ C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\BlogEngine.Web.staticwebassets.runtime.json
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Serilog.Sinks.File.dll

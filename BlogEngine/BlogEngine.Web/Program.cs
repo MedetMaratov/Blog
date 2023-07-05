@@ -1,10 +1,13 @@
 using BlogEngine.Domain.Entities;
 using BlogEngine.Persistence;
+using BlogEngine.Web.Services;
 using BlogEngineApplication;
 using BlogEngineApplication.Common.Mapping;
 using BlogEngineApplication.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
+using Serilog.Events;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +31,14 @@ services.AddCors(options =>
         policy.AllowAnyOrigin();
     });
 });
+services.AddSingleton<ICurrentUserService, CurrentUserService>();
+services.AddHttpContextAccessor();
+
+var logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .WriteTo.File("BlogWebAppLog-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+builder.Logging.AddSerilog(logger);
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
@@ -39,9 +50,9 @@ using (var scope = app.Services.CreateScope())
     }
     catch (Exception exception)
     {
+        Log.Fatal(exception, "An error occured while app initialization");
     }
 }
-
 app.UseRouting();
 app.UseHttpsRedirection();
 

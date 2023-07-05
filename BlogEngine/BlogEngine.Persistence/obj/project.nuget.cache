@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EN3m+GHTW4kylI0igZ18DhBD2vBH+8zU1RmYk5tHh/UHaIop8/ZLTkcSW3DmsYIQTt64eh4VFcM8EYv0cNZhZQ==",
+  "dgSpecHash": "/SvRoaKMDFRZmpk0caSu9ckTfTnPHtHYyPqa7kiLfs3mtXWnYgnmIgYIBzHANVQL9DiMr0rULiXnrrsNzexkFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,8 @@
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\serilog\\3.0.1\\serilog.3.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\serilog.sinks.file\\5.0.1-dev-00947\\serilog.sinks.file.5.0.1-dev-00947.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",

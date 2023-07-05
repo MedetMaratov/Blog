@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BlogEngineApplication.Common.Behaviors;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +16,8 @@ namespace BlogEngineApplication
         {
             services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+            services.AddTransient(typeof(IPipelineBehavior<,>),
+                typeof(LoggingBehavior<,>));
             return services;
         }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xudg0rquwaWjmFk7BxgLlIbpxVDvM7h9EcrivfuZs4G581BI3WpqLMtROZwdh3TEmHBGnH1PqqgCA0vnBwwU1g==",
+  "dgSpecHash": "IBuLDiTFe5xNqLdZpwBdk01niFvqEZSCeO9Ixs5nEuHEILOW6Uj/wDeCzZbmtQd5TBwW5Od0A1bqhEFXQATblA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Tests\\BlogEngine.Tests.csproj",
   "expectedPackageFiles": [
@@ -55,6 +55,8 @@
     "C:\\Users\\Администратор\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\nunit.analyzers\\3.3.0\\nunit.analyzers.3.3.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\serilog\\3.0.1\\serilog.3.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\serilog.sinks.file\\5.0.1-dev-00947\\serilog.sinks.file.5.0.1-dev-00947.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\shouldly\\4.2.1\\shouldly.4.2.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",

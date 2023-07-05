@@ -1,13 +1,6 @@
 ﻿using BlogEngine.Tests.Common;
-using BlogEngineApplication.Blogs.Commands.CreateBlog;
 using BlogEngineApplication.Categories.Create;
-using BlogEngineApplication.Tags.Commands.Create;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace BlogEngine.Tests.Category.Commands
@@ -21,7 +14,7 @@ namespace BlogEngine.Tests.Category.Commands
             var handler = new CreateCategoryCommandHandler(Context);
             var name = "Test category";
             // Act
-            var tagId = await handler.Handle(
+            var caregoryId = await handler.Handle(
                 new CreateCategoryCommand
                 {
                     Name = name,
@@ -29,7 +22,7 @@ namespace BlogEngine.Tests.Category.Commands
                 CancellationToken.None);
             // Assert
             Assert.NotNull(await Context.BlogCategories.SingleOrDefaultAsync(category =>
-            category.Id == tagId && category.Name == name));
+            category.Id == caregoryId && category.Name == name));
         }
     }
 }
