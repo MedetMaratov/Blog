@@ -34,11 +34,11 @@ services.AddCors(options =>
 services.AddSingleton<ICurrentUserService, CurrentUserService>();
 services.AddHttpContextAccessor();
 
-var logger = new LoggerConfiguration()
+Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .WriteTo.File("BlogWebAppLog-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
-builder.Logging.AddSerilog(logger);
+builder.Host.UseSerilog();
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
@@ -53,6 +53,7 @@ using (var scope = app.Services.CreateScope())
         Log.Fatal(exception, "An error occured while app initialization");
     }
 }
+
 app.UseRouting();
 app.UseHttpsRedirection();
 
@@ -60,5 +61,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.UseCors("AllowAll");
-
 app.Run();

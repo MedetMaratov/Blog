@@ -1,0 +1,263 @@
+2023-07-06 14:32:26.386 +06:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-06 14:32:27.481 +06:00 [INF] Executed DbCommand (1,005ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-06 14:32:27.959 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-06 14:32:28.501 +06:00 [INF] Now listening on: https://localhost:7002
+2023-07-06 14:32:28.505 +06:00 [INF] Now listening on: http://localhost:5280
+2023-07-06 14:32:28.515 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-06 14:32:28.519 +06:00 [INF] Hosting environment: Development
+2023-07-06 14:32:28.522 +06:00 [INF] Content root path: C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web
+2023-07-06 14:32:36.982 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/ - -
+2023-07-06 14:32:37.051 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/ - - - 404 0 - 70.6143ms
+2023-07-06 14:32:37.095 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/favicon.ico - -
+2023-07-06 14:32:37.098 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/favicon.ico - - - 404 0 - 2.7462ms
+2023-07-06 14:33:14.529 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetAll - -
+2023-07-06 14:33:14.533 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:33:14.562 +06:00 [INF] Route matched with {action = "GetAll", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetAll() on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:33:14.996 +06:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+ORDER BY [b].[Created] DESC
+2023-07-06 14:33:15.022 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:33:15.076 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web) in 509.6546ms
+2023-07-06 14:33:15.077 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:33:15.082 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetAll - - - 200 - application/json;+charset=utf-8 553.1115ms
+2023-07-06 14:41:18.548 +06:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-06 14:41:19.889 +06:00 [INF] Executed DbCommand (1,288ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-06 14:41:20.136 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-06 14:41:20.368 +06:00 [INF] Now listening on: https://localhost:7002
+2023-07-06 14:41:20.368 +06:00 [INF] Now listening on: http://localhost:5280
+2023-07-06 14:41:20.370 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-06 14:41:20.370 +06:00 [INF] Hosting environment: Development
+2023-07-06 14:41:20.371 +06:00 [INF] Content root path: C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web
+2023-07-06 14:41:28.800 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/ - -
+2023-07-06 14:41:28.866 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/ - - - 404 0 - 68.6163ms
+2023-07-06 14:41:28.902 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/favicon.ico - -
+2023-07-06 14:41:28.909 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/favicon.ico - - - 404 0 - 6.6970ms
+2023-07-06 14:41:45.452 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetAll - -
+2023-07-06 14:41:45.459 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:41:45.498 +06:00 [INF] Route matched with {action = "GetAll", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetAll() on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:41:46.371 +06:00 [INF] Executed DbCommand (255ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+ORDER BY [b].[Created] DESC
+2023-07-06 14:41:46.401 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:41:46.460 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web) in 953.7495ms
+2023-07-06 14:41:46.461 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:41:46.470 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetAll - - - 200 - application/json;+charset=utf-8 1018.6544ms
+2023-07-06 14:46:07.136 +06:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-06 14:46:08.435 +06:00 [INF] Executed DbCommand (1,240ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-06 14:46:08.598 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-06 14:46:08.725 +06:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2023-07-06 14:46:54.965 +06:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-06 14:46:56.053 +06:00 [INF] Executed DbCommand (1,036ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-06 14:46:56.188 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-06 14:46:56.246 +06:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2023-07-06 14:48:43.302 +06:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-06 14:48:44.583 +06:00 [INF] Executed DbCommand (1,225ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-06 14:48:44.808 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-06 14:48:45.052 +06:00 [INF] Now listening on: https://localhost:7002
+2023-07-06 14:48:45.052 +06:00 [INF] Now listening on: http://localhost:5280
+2023-07-06 14:48:45.053 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-06 14:48:45.054 +06:00 [INF] Hosting environment: Development
+2023-07-06 14:48:45.054 +06:00 [INF] Content root path: C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web
+2023-07-06 14:48:50.342 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/ - -
+2023-07-06 14:48:50.464 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/ - - - 404 0 - 129.0053ms
+2023-07-06 14:48:50.562 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/favicon.ico - -
+2023-07-06 14:48:50.568 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/favicon.ico - - - 404 0 - 5.4849ms
+2023-07-06 14:49:01.323 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetAll - -
+2023-07-06 14:49:01.328 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:49:01.358 +06:00 [INF] Route matched with {action = "GetAll", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetAll() on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:49:01.544 +06:00 [INF] Request: GetAllBlogsListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetAllBlogsListQuery"}
+2023-07-06 14:49:02.025 +06:00 [INF] Executed DbCommand (132ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+ORDER BY [b].[Created] DESC
+2023-07-06 14:49:02.102 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:49:02.193 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web) in 830.2119ms
+2023-07-06 14:49:02.194 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:49:02.204 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetAll - - - 200 - application/json;+charset=utf-8 880.3402ms
+2023-07-06 14:49:04.615 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetAll - -
+2023-07-06 14:49:04.618 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:49:04.619 +06:00 [INF] Route matched with {action = "GetAll", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetAll() on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:49:04.621 +06:00 [INF] Request: GetAllBlogsListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetAllBlogsListQuery"}
+2023-07-06 14:49:04.716 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+ORDER BY [b].[Created] DESC
+2023-07-06 14:49:04.718 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:49:04.720 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web) in 100.5848ms
+2023-07-06 14:49:04.720 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:49:04.721 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetAll - - - 200 - application/json;+charset=utf-8 106.3737ms
+2023-07-06 14:49:42.178 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetAll - -
+2023-07-06 14:49:42.178 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:49:42.178 +06:00 [INF] Route matched with {action = "GetAll", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetAll() on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:49:42.179 +06:00 [INF] Request: GetAllBlogsListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetAllBlogsListQuery"}
+2023-07-06 14:49:42.184 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+ORDER BY [b].[Created] DESC
+2023-07-06 14:49:42.225 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:49:42.226 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web) in 46.9555ms
+2023-07-06 14:49:42.226 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetAll (BlogEngine.Web)'
+2023-07-06 14:49:42.226 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetAll - - - 200 - application/json;+charset=utf-8 47.8683ms
+2023-07-06 14:50:36.796 +06:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-06 14:50:36.872 +06:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-06 14:50:37.022 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-06 14:50:37.170 +06:00 [INF] Now listening on: https://localhost:7002
+2023-07-06 14:50:37.170 +06:00 [INF] Now listening on: http://localhost:5280
+2023-07-06 14:50:37.172 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-06 14:50:37.172 +06:00 [INF] Hosting environment: Development
+2023-07-06 14:50:37.172 +06:00 [INF] Content root path: C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Web
+2023-07-06 14:50:41.794 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/ - -
+2023-07-06 14:50:41.887 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/ - - - 404 0 - 95.1047ms
+2023-07-06 14:50:41.944 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7002/favicon.ico - -
+2023-07-06 14:50:41.949 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7002/favicon.ico - - - 404 0 - 5.6386ms
+2023-07-06 14:51:02.830 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetByName/Cooking - -
+2023-07-06 14:51:02.846 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web)'
+2023-07-06 14:51:02.902 +06:00 [INF] Route matched with {action = "GetByName", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetByName(System.String) on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:51:03.119 +06:00 [INF] Request: GetBlogsListBuNameQuery "00000000-0000-0000-0000-000000000000" {"Name":"Cooking","$type":"GetBlogsListBuNameQuery"}
+2023-07-06 14:51:03.791 +06:00 [INF] Executed DbCommand (154ms) [Parameters=[@__request_Name_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+WHERE [b].[Name] = @__request_Name_0
+ORDER BY [b].[Created] DESC
+2023-07-06 14:51:03.830 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:51:03.890 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web) in 983.1324ms
+2023-07-06 14:51:03.891 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web)'
+2023-07-06 14:51:03.899 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetByName/Cooking - - - 200 - application/json;+charset=utf-8 1069.5355ms
+2023-07-06 14:51:14.369 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetByName/Cookings - -
+2023-07-06 14:51:14.371 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web)'
+2023-07-06 14:51:14.372 +06:00 [INF] Route matched with {action = "GetByName", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetByName(System.String) on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:51:14.375 +06:00 [INF] Request: GetBlogsListBuNameQuery "00000000-0000-0000-0000-000000000000" {"Name":"Cookings","$type":"GetBlogsListBuNameQuery"}
+2023-07-06 14:51:14.527 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Name_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+WHERE [b].[Name] = @__request_Name_0
+ORDER BY [b].[Created] DESC
+2023-07-06 14:51:14.530 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:51:14.531 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web) in 158.253ms
+2023-07-06 14:51:14.531 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web)'
+2023-07-06 14:51:14.532 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetByName/Cookings - - - 200 - application/json;+charset=utf-8 162.4914ms
+2023-07-06 14:51:16.948 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/Blog/GetByName/Cooking - -
+2023-07-06 14:51:16.949 +06:00 [INF] Executing endpoint 'BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web)'
+2023-07-06 14:51:16.949 +06:00 [INF] Route matched with {action = "GetByName", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM]] GetByName(System.String) on controller BlogEngine.Web.Controllers.BlogController (BlogEngine.Web).
+2023-07-06 14:51:16.950 +06:00 [INF] Request: GetBlogsListBuNameQuery "00000000-0000-0000-0000-000000000000" {"Name":"Cooking","$type":"GetBlogsListBuNameQuery"}
+2023-07-06 14:51:16.959 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_Name_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name] AS [Title], [b].[Created]
+FROM [Blogs] AS [b]
+WHERE [b].[Name] = @__request_Name_0
+ORDER BY [b].[Created] DESC
+2023-07-06 14:51:16.959 +06:00 [INF] Executing OkObjectResult, writing value of type 'BlogEngineApplication.Blogs.Queries.GetBlogsList.BlogListVM'.
+2023-07-06 14:51:16.960 +06:00 [INF] Executed action BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web) in 10.7188ms
+2023-07-06 14:51:16.960 +06:00 [INF] Executed endpoint 'BlogEngine.Web.Controllers.BlogController.GetByName (BlogEngine.Web)'
+2023-07-06 14:51:16.960 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/Blog/GetByName/Cooking - - - 200 - application/json;+charset=utf-8 11.6596ms

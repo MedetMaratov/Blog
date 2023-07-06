@@ -12,7 +12,7 @@ namespace BlogEngineApplication.Common.Behaviors
     public class LoggingBehavior<TRequest, TResponse> 
         : IPipelineBehavior<TRequest, TResponse> where TRequest 
         : IRequest<TResponse>
-    {
+    {   
         ICurrentUserService _currentUserService;
         public LoggingBehavior(ICurrentUserService currentUserService)
         {
