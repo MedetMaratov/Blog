@@ -16,7 +16,7 @@ namespace BlogEngine.Domain.Entities
         public string Name { get; set; }
         [MaxLength(500)]
         public string Description { get; set; }
-        public List<BlogCategory> Category { get; set; }
+        public List<Category> Categories { get; set; }
         public string Image { get; set; }
         public DateTime Created { get; set; }
         public DateTime? Edited { get; set; }

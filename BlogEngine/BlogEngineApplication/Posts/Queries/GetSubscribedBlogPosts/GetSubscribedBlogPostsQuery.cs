@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogEngineApplication.Posts.Queries
+namespace BlogEngineApplication.Posts.Queries.GetSubscribedBlogPosts
 {
-    public class GetPostsByBlogIdQuery : IRequest<PostListVM>
+    public class GetSubscribedBlogPostsQuery : IRequest<PostListVM>
     {
+        public Guid UserId { get; set; }
         public Guid BlogId { get; set; }
+
     }
 }

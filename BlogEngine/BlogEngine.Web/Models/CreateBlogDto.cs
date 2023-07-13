@@ -10,7 +10,7 @@ namespace BlogEngine.Web.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public List<BlogCategory> Categories { get; set; }
+        public List<Guid> Categories { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -21,7 +21,7 @@ namespace BlogEngine.Web.Models
                 opt => opt.MapFrom(blogDto => blogDto.Description))
                 .ForMember(blogCommand => blogCommand.Image,
                 opt => opt.MapFrom(blogDto => blogDto.Image))
-                .ForMember(blogCommand => blogCommand.Categories,
+                .ForMember(blogCommand => blogCommand.CategoriesId,
                 opt => opt.MapFrom(blogDto => blogDto.Categories));              
         }
     }

@@ -1,6 +1,8 @@
-﻿using BlogEngineApplication.Common.Exeptions;
+﻿using BlogEngine.Domain.Entities;
+using BlogEngineApplication.Common.Exeptions;
 using BlogEngineApplication.Interfaces;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +34,24 @@ namespace BlogEngineApplication.Posts.Commands.Edit
             postToEdit.Title = request.Title;
             postToEdit.Content = request.Content;
             postToEdit.EditedAt = DateTime.Now;
-            postToEdit.Tags = request.Tags;
+            postToEdit.Tags = new List<Tag>();
+            foreach (var tag in request.Tags)
+            {
+                var existingTag = await _dbContext.Tags.FirstOrDefaultAsync(t => t.Title == tag);
+                if (existingTag != null)
+                {
+                    postToEdit.Tags.Add(existingTag);
+                }
+                else
+                {
+                    var newTag = new Tag
+                    {
+                        Title = tag
+                    };
+                    postToEdit.Tags.Add(newTag);
+                }
+            }
+            
             await _dbContext.SaveChangesAsync(cancellationToken);
         }
     }

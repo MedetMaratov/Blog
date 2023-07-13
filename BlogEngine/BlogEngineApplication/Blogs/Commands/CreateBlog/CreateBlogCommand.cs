@@ -14,6 +14,6 @@ namespace BlogEngineApplication.Blogs.Commands.CreateBlog
         public string Title { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public List<BlogCategory> Categories { get; set; }
+        public List<Guid> CategoriesId { get; set; }
     }
 }

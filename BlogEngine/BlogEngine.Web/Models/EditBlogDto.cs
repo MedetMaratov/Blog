@@ -5,18 +5,18 @@ using BlogEngineApplication.Common.Mapping;
 
 namespace BlogEngine.Web.Models
 {
-    public class EditeBlogDto : IMapWith<EditeBlogCommand>
+    public class EditBlogDto : IMapWith<EditeBlogCommand>
     {
         public Guid UserId { get; set; }
         public Guid BlogId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public List<BlogCategory> Categories { get; set; }
+        public List<Category> Categories { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<EditeBlogDto, EditeBlogCommand>()
+            profile.CreateMap<EditBlogDto, EditeBlogCommand>()
           .ForMember(dest => dest.BlogId, opt => opt.MapFrom(src => src.BlogId))
           .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
           .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))

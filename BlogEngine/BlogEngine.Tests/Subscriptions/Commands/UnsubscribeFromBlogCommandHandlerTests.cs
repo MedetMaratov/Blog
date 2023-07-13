@@ -35,7 +35,7 @@ namespace BlogEngine.Tests.Subscriptions.Commands
             }, CancellationToken.None);
 
             // Assert
-            Assert.Null(await Context.Subsсription.SingleOrDefaultAsync(subscription =>
+            Assert.Null(await Context.Subsсriptions.SingleOrDefaultAsync(subscription =>
             subscription.Id == newSubcsriptionId));
         }
     }

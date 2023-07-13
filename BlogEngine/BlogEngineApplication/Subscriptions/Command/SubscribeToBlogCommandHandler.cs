@@ -29,7 +29,7 @@ namespace BlogEngine.Application.Subscriptions.Command
                 UserId = request.UserId
             };
 
-            await _dbContext.Subsсription.AddAsync(subscription, cancellationToken);
+            await _dbContext.Subsсriptions.AddAsync(subscription, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return subscription.Id;
         }

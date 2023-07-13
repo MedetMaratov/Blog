@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogEngineApplication.Posts.Queries
+namespace BlogEngineApplication.Posts.Queries.GetPostByBlogId
 {
     public class GetPostsByBlogIdQueryHandler : IRequestHandler<GetPostsByBlogIdQuery, PostListVM>
     {
@@ -22,12 +22,11 @@ namespace BlogEngineApplication.Posts.Queries
             _mapper = mapper;
         }
 
-        public async Task<PostListVM> Handle(GetPostsByBlogIdQuery request, 
+        public async Task<PostListVM> Handle(GetPostsByBlogIdQuery request,
             CancellationToken cancellationToken)
         {
             var posts = await _dbContext
                 .Posts
-                .Include(post => post.Comments)
                 .Include(post => post.Tags)
                 .Where(post => post.BlogId == request.BlogId)
                 .OrderByDescending(post => post.CreatedAt)

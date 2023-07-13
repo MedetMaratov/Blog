@@ -22,7 +22,7 @@ namespace BlogEngineApplication.Blogs.Queries.GetBlogsList.Subscribed
             CancellationToken cancellationToken)
         {
             var subscriptions = await _dbContext
-            .Subsсription
+            .Subsсriptions
             .Where(s => s.UserId == request.UserId)
             .ToListAsync();
             var blogIds = subscriptions
@@ -31,6 +31,7 @@ namespace BlogEngineApplication.Blogs.Queries.GetBlogsList.Subscribed
                 .ToList();
             var blogs = await _dbContext
                 .Blogs
+                .Include(blog => blog.Categories)
                 .Where(b => blogIds.Contains(b.Id))
                 .ProjectTo<BlogLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);

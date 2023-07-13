@@ -30,7 +30,7 @@ namespace BlogEngine.Tests.Blogs.Commands
                 UserId = ContextFactory.UserAId,
                 Title = updatedTitle,
                 Description = updatedDescription,
-                Categories = new List<BlogCategory>()
+                Categories = new List<Domain.Entities.Category>()
             }, CancellationToken.None);
 
             //Assert

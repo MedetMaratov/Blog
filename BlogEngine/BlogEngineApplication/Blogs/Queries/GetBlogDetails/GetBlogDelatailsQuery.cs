@@ -1,4 +1,5 @@
 ﻿using BlogEngine.Domain.Entities;
+using BlogEngineApplication.Blogs.Queries.GetBlogsList;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Blogs.Queries.GetBlogDetails
 {
-    public class GetBlogDetailsQuery : IRequest<Blog>
+    public class GetBlogDetailsQuery : IRequest<BlogLookupDto>
     {
         public Guid BlogId { get; set; }
     }

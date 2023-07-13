@@ -2,15 +2,11 @@
 using BlogEngineApplication.Common.Exeptions;
 using BlogEngineApplication.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlogEngineApplication.Posts.Commands.Create
 {
-    public class CreatePostCommandHandler : IRequest<CreatePostCommand>
+    public class CreatePostCommandHandler : IRequestHandler<CreatePostCommand, Guid>
     {
         private readonly IBlogDbContext _dbContext;
 
@@ -19,10 +15,11 @@ namespace BlogEngineApplication.Posts.Commands.Create
             _dbContext = dbContext;
         }
 
-        public async Task<Guid> Handle(CreatePostCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreatePostCommand request,
+            CancellationToken cancellationToken)
         {
             var blogToPost = await _dbContext.Blogs
-                .FindAsync(new object[] { request.BlogId }, cancellationToken);
+                .FirstOrDefaultAsync(b => b.Id == request.BlogId, cancellationToken);
             if (blogToPost == null)
             {
                 throw new NotFoundException(nameof(blogToPost), request.BlogId);
@@ -31,6 +28,7 @@ namespace BlogEngineApplication.Posts.Commands.Create
             {
                 throw new NotPermissionException("You do not have permission to perform this action.");
             }
+
             var post = new Post
             {
                 Id = Guid.NewGuid(),
@@ -40,8 +38,25 @@ namespace BlogEngineApplication.Posts.Commands.Create
                 CreatedAt = DateTime.UtcNow,
                 Comments = new List<Comment>(),
                 Blog = blogToPost,
-                Tags = request.Tags
+                Tags = new List<Tag>()
             };
+
+            foreach (var tag in request.TagTitles)
+            {
+                var existingTag = await _dbContext.Tags.FirstOrDefaultAsync(t => t.Title == tag);
+                if (existingTag != null)
+                {
+                    post.Tags.Add(existingTag); 
+                }
+                else
+                {
+                    var newTag = new Tag
+                    {
+                        Title = tag
+                    };
+                    post.Tags.Add(newTag); 
+                }
+            }
             await _dbContext.Posts.AddAsync(post);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return post.Id;

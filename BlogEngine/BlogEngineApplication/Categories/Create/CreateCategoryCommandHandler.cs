@@ -20,12 +20,12 @@ namespace BlogEngineApplication.Categories.Create
 
         public async Task<Guid> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-            var category = new BlogCategory
+            var category = new Category
             {
                 Id = Guid.NewGuid(),
                 Name = request.Name,
             };
-            _dbContext.BlogCategories.Add(category);
+            _dbContext.Categories.Add(category);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return category.Id;
         }

@@ -16,7 +16,7 @@ namespace BlogEngine.Tests.Posts.Commands
             var handler = new CreatePostCommandHandler(Context);
             var title = "title";
             var postContent = "Content";
-            var tags = new List<PostTag>();
+            var tags = new List<string>();
 
             // Act
             var postId = await handler.Handle(new CreatePostCommand
@@ -24,7 +24,7 @@ namespace BlogEngine.Tests.Posts.Commands
                 BlogId = ContextFactory.BlogBId,
                 Title = title,
                 Content = postContent,
-                Tags = tags,
+                TagTitles = tags,
                 UserId = ContextFactory.UserBId
             }, CancellationToken.None);
 

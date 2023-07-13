@@ -28,7 +28,7 @@ namespace BlogEngine.Web.Controllers
             return Ok(commentId);
         }
 
-        [HttpDelete("post/{postId}/comment/{commentId}")]
+        [HttpDelete("{postId}/{commentId}")]
         public async Task<ActionResult> Delete(Guid postId, Guid commentId)
         {
             var command = new DeleteCommentCommand()

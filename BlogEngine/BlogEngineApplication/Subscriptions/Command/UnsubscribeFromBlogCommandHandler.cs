@@ -21,13 +21,13 @@ namespace BlogEngineApplication.Subscriptions.Command
 
         public async Task Handle(UnsubscribeFromBlogCommand request, CancellationToken cancellationToken)
         {
-            var subscription = await _dbContext.Subsсription
+            var subscription = await _dbContext.Subsсriptions
                 .FirstOrDefaultAsync(s => s.BlogId == request.BlogId
                 && s.UserId == request.UserId, cancellationToken);
 
             if (subscription != null)
             {
-                _dbContext.Subsсription.Remove(subscription);
+                _dbContext.Subsсriptions.Remove(subscription);
                 await _dbContext.SaveChangesAsync(cancellationToken);
             }
         }

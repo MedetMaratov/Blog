@@ -87,7 +87,7 @@ namespace BlogEngine.Web.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(EditeBlogDto editeBlogDto)
+        public async Task<IActionResult> Update(EditBlogDto editeBlogDto)
         {
             var query = _mapper.Map<EditeBlogCommand>(editeBlogDto);
             query.UserId = UserId;

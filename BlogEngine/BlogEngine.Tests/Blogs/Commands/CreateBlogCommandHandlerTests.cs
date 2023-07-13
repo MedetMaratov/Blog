@@ -27,7 +27,7 @@ namespace BlogEngine.Tests.Blogs.Commands
                 {
                     Title = name,
                     Description = description,
-                    Categories = new List<BlogCategory>(),
+                    CategoriesId = new List<Guid>(),
                     Image = "SourceA",
                     UserId = ContextFactory.UserAId
                 },

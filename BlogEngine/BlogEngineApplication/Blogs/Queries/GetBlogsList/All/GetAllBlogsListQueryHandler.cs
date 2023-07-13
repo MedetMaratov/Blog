@@ -26,6 +26,7 @@ namespace BlogEngineApplication.Blogs.Queries.GetBlogsList.All
         {
             var blogs = await _dbContext
                 .Blogs
+                .Include(blog => blog.Categories)
                 .OrderByDescending(blog => blog.Created)
                 .ProjectTo<BlogLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);

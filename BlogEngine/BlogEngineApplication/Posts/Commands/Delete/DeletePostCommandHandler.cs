@@ -2,6 +2,7 @@
 using BlogEngineApplication.Common.Exeptions;
 using BlogEngineApplication.Interfaces;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +22,8 @@ namespace BlogEngineApplication.Posts.Commands.Delete
 
         public async Task Handle(DeletePostCommand request, CancellationToken cancellationToken)
         {
-            var blog = await _dbContext.Blogs
-                .FindAsync(new object[] { request.BlogId }, cancellationToken);
+            var blog = await _dbContext.Blogs.Include(b => b.Posts)
+                .FirstOrDefaultAsync(b => b.Id == request.BlogId);
             if (blog == null)
             {
                 throw new NotFoundException(nameof(Blog), request.BlogId);

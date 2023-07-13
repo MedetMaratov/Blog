@@ -3,6 +3,7 @@ using BlogEngine.Domain.Entities;
 using BlogEngine.Persistence;
 using BlogEngine.Tests.Common;
 using BlogEngineApplication.Blogs.Queries.GetBlogDetails;
+using BlogEngineApplication.Blogs.Queries.GetBlogsList;
 using Shouldly;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace BlogEngine.Tests.Blogs.Queries
         public async Task GetBlogDetailsQuerieHandler_Succes()
         {
             // Arrange
-            var handler = new GetBlogDetailsQueryHandler(_context);
+            var handler = new GetBlogDetailsQueryHandler(_context, _mapper);
 
             // Act
             var result = await handler.Handle(new GetBlogDetailsQuery
@@ -38,8 +39,8 @@ namespace BlogEngine.Tests.Blogs.Queries
             }, CancellationToken.None);
 
             // Assert
-            result.ShouldBeOfType<Blog>();
-            result.Name.ShouldBe("Name2");
+            result.ShouldBeOfType<BlogLookupDto>();
+            result.Title.ShouldBe("Name2");
             result.Description.ShouldBe("DescriptionA");
             result.Image.ShouldBe("SourceA");
         }

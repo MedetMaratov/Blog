@@ -14,6 +14,6 @@ namespace BlogEngineApplication.Posts.Commands.Create
         public Guid BlogId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public List<PostTag> Tags { get; set; }
+        public List<string> TagTitles { get; set; }
     }
 }

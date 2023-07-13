@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogEngineApplication.Tags.Commands.Create
+namespace BlogEngineApplication.Comments.Queries
 {
-    public class CreatePostTagCommand : IRequest<Guid>
+    public class GetAllCommentsByPostIdQuery : IRequest<CommentsListVm>
     {
-        public string Title { get; set; }
         public Guid PostId { get; set; }
     }
 }

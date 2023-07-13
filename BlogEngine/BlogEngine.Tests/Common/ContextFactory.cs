@@ -37,7 +37,7 @@ namespace BlogEngine.Tests.Common
                 Id = BlogIdForWrongUserIdTest,
                 Name = "Name1",
                 Posts = new List<Post>(),
-                Category = new List<BlogCategory>(),
+                Categories = new List<Domain.Entities.Category>(),
                 Image = "SourceA",
                 CreatorId = UserAId
             };
@@ -49,7 +49,7 @@ namespace BlogEngine.Tests.Common
                 Id = BlogBId,
                 Name = "Name2",
                 Posts = new List<Post>(),
-                Category = new List<BlogCategory>(),
+                Categories = new List<Domain.Entities.Category>(),
                 Image = "SourceA",
                 CreatorId = UserBId
             };
@@ -60,7 +60,7 @@ namespace BlogEngine.Tests.Common
                 Edited = null,
                 Id = BlogIdForDelete,
                 Name = "Blog for delete",
-                Category = new List<BlogCategory>(),
+                Categories = new List<Domain.Entities.Category>(),
                 Image = "SourceA",
                 CreatorId = UserAId
             };
@@ -71,7 +71,7 @@ namespace BlogEngine.Tests.Common
                 Edited = null,
                 Id = BlogIdForUpdate,
                 Name = "Blog for update",
-                Category = new List<BlogCategory>(),
+                Categories = new List<Domain.Entities.Category>(),
                 Image = "SourceB",
                 CreatorId = UserAId
             };
@@ -83,7 +83,7 @@ namespace BlogEngine.Tests.Common
                 Title = "TitleA",
                 Content = "ContentA",
                 Comments = new List<Comment>(),
-                Tags = new List<PostTag>(),
+                Tags = new List<Tag>(),
                 CreatedAt = DateTime.Today,
                 EditedAt = null
             };
@@ -95,7 +95,7 @@ namespace BlogEngine.Tests.Common
                 Title = "TitleB",
                 Content = "ContentB",
                 Comments = new List<Comment>(),
-                Tags = new List<PostTag>(),
+                Tags = new List<Tag>(),
                 CreatedAt = DateTime.Today,
                 EditedAt = null
             };
@@ -107,7 +107,7 @@ namespace BlogEngine.Tests.Common
                 Title = "For delete",
                 Content = "For delete",
                 Comments = new List<Comment>(),
-                Tags = new List<PostTag>(),
+                Tags = new List<Tag>(),
                 CreatedAt = DateTime.Today,
                 EditedAt = null
             };
@@ -119,20 +119,16 @@ namespace BlogEngine.Tests.Common
                 Title = "For update",
                 Content = "For update",
                 Comments = new List<Comment>(),
-                Tags = new List<PostTag>(),
+                Tags = new List<Tag>(),
                 CreatedAt = DateTime.Today,
                 EditedAt = null
             };
-            var tagA = new PostTag
+            var tagA = new Tag
             {
-                Id = Guid.Parse("D2D701C8-A58F-45DB-B526-E638E824E68F"),
-                PostId = postA.Id,
                 Title = "tagA"
             };
-            var tagB = new PostTag
+            var tagB = new Tag
             {
-                Id = Guid.Parse("0B899867-4B78-4667-A427-62971041040A"),
-                PostId = postB.Id,
                 Title = "tagB"
             };
             var commentA = new Comment
@@ -152,12 +148,12 @@ namespace BlogEngine.Tests.Common
                 CreatedAt = DateTime.Today,
             };
 
-            var categoryA = new BlogCategory
+            var categoryA = new Domain.Entities.Category
             {
                 Id = Guid.Parse("972C27B9-1E48-4A1A-9081-87F2F534CED9"),
                 Name = "CategoryA",
             };
-            var categoryB = new BlogCategory
+            var categoryB = new Domain.Entities.Category
             {
                 Id = Guid.Parse("A3BB25C6-9898-4728-B618-5EA9C6350522"),
                 Name = "CategoryB",
@@ -175,10 +171,10 @@ namespace BlogEngine.Tests.Common
             blogB.Posts.Add(postB);
             blogB.Posts.Add(postForUpdate);
 
-            blogA.Category.Add(categoryA);
-            blogB.Category.Add(categoryB);
+            blogA.Categories.Add(categoryA);
+            blogB.Categories.Add(categoryB);
             context.Blogs.AddRange(blogA, blogB, blogForDelete, blogForUpdate);
-            context.Subsсription.AddRange(subscription1, subscription2);
+            context.Subsсriptions.AddRange(subscription1, subscription2);
             context.SaveChanges();
             return context;
         }

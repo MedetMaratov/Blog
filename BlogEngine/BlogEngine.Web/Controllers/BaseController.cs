@@ -5,7 +5,7 @@
     namespace BlogEngine.Web.Controllers
     {
         [ApiController]
-        [Route("[controller]/[action]")]
+        [Route("api/[controller]/[action]")]
         public abstract class BaseController : Controller
         {
             private IMediator _mediator;

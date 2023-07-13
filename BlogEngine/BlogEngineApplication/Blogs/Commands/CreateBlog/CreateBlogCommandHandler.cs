@@ -26,9 +26,10 @@ namespace BlogEngineApplication.Blogs.Commands.CreateBlog
                 Image = request.Image,
                 Posts = new List<Post>(),
                 Subscriptions = new List<Subscription>(),
-                Category = request.Categories
             };
-
+            var categories = _dbContext.Categories.Where(category =>
+            request.CategoriesId.Contains(category.Id)).ToList();
+            blog.Categories = categories;
             await _dbContext.Blogs.AddAsync(blog, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return blog.Id;

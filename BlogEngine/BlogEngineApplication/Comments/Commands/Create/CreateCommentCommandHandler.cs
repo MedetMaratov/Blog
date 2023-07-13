@@ -23,16 +23,6 @@ namespace BlogEngineApplication.Comments.Commands.Create
         public async Task<Guid> Handle(CreateCommentCommand request,
             CancellationToken cancellationToken)
         {
-            var post = await _dbContext
-                .Posts
-                .Include(p => p.Comments)
-                .FirstOrDefaultAsync(p => p.Id == request.PostId, cancellationToken);
-
-            if (post == null)
-            {
-                throw new NotFoundException(nameof(post), request.PostId);
-            }
-
             var comment = new Comment
             {
                 Id = Guid.NewGuid(),
@@ -42,7 +32,7 @@ namespace BlogEngineApplication.Comments.Commands.Create
                 PostId = request.PostId,
             };
 
-            post.Comments.Add(comment);
+            await _dbContext.Comments.AddAsync(comment);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return comment.Id;
         }

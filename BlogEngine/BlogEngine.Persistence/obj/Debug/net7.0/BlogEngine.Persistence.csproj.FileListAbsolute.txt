@@ -15,3 +15,5 @@ C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Pers
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Persistence\obj\Debug\net7.0\refint\BlogEngine.Persistence.dll
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Persistence\obj\Debug\net7.0\BlogEngine.Persistence.pdb
 C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Persistence\obj\Debug\net7.0\ref\BlogEngine.Persistence.dll
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Persistence\bin\Debug\net7.0\BlogEngine.Persistence.runtimeconfig.json
+C:\Users\Администратор\source\repos\Blog\BlogEngine\BlogEngine.Persistence\obj\Debug\net7.0\BlogEngine.Persistence.genruntimeconfig.cache

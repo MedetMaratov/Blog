@@ -26,7 +26,7 @@ namespace BlogEngine.Tests.Subscriptions.Commands
             }, CancellationToken.None);
 
             // Assert
-            Assert.NotNull(await Context.Subsсription.SingleOrDefaultAsync(subscription =>
+            Assert.NotNull(await Context.Subsсriptions.SingleOrDefaultAsync(subscription =>
             subscription.Id == subscriptionId && 
             subscription.BlogId == ContextFactory.BlogBId 
             && subscription.UserId == ContextFactory.UserBId));

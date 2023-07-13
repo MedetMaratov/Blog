@@ -21,7 +21,7 @@ namespace BlogEngine.Tests.Category.Commands
                 },
                 CancellationToken.None);
             // Assert
-            Assert.NotNull(await Context.BlogCategories.SingleOrDefaultAsync(category =>
+            Assert.NotNull(await Context.Categories.SingleOrDefaultAsync(category =>
             category.Id == caregoryId && category.Name == name));
         }
     }

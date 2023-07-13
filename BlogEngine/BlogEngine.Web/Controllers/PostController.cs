@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using BlogEngine.Application.Posts.Queries;
 using BlogEngine.Domain.Entities;
 using BlogEngine.Web.Models;
 using BlogEngineApplication.Posts.Commands.Create;
 using BlogEngineApplication.Posts.Commands.Delete;
 using BlogEngineApplication.Posts.Commands.Edit;
 using BlogEngineApplication.Posts.Queries;
+using BlogEngineApplication.Posts.Queries.GetPostByBlogId;
+using BlogEngineApplication.Posts.Queries.GetPostDetails;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 
 namespace BlogEngine.Web.Controllers
 {
@@ -43,8 +43,7 @@ namespace BlogEngine.Web.Controllers
         }
 
         [HttpPost("{blogId}")]
-        public async Task<ActionResult<Guid>> Create(Guid blogId,
-            [FromBody] PostDto createPostDto)
+        public async Task<ActionResult<Guid>> Create(Guid blogId, [FromBody] CreatePostDto createPostDto)
         {
             var command = _mapper.Map<CreatePostCommand>(createPostDto);
             command.UserId = UserId;
@@ -53,8 +52,8 @@ namespace BlogEngine.Web.Controllers
             return Ok(postId);
         }
 
-        [HttpPut("blogs/{blogId}/posts/{postId}")]
-        public async Task<ActionResult> Edit(Guid postID,[FromBody] PostDto editPostDto)
+        [HttpPut("{blogId}/{postId}")]
+        public async Task<ActionResult> Edit(Guid postID,[FromBody] EditPostDto editPostDto)
         {
             var command = _mapper.Map<EditPostCommand>(editPostDto);
             command.UserID = UserId;
@@ -63,7 +62,7 @@ namespace BlogEngine.Web.Controllers
             return NoContent();
         }
 
-        [HttpDelete("blogs/{blogId}/posts/{postId}")]
+        [HttpDelete("{blogId}/{postId}")]
         public async Task<ActionResult> Delete(Guid blogId, Guid postId)
         {
             var query = new DeletePostCommand()

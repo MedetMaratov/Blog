@@ -25,8 +25,8 @@ namespace BlogEngineApplication.Blogs.Queries.GetBlogsList.ByCreator
 
         public async Task<BlogListVM> Handle(GetBlogsListByCreatorQuery request, CancellationToken cancellationToken)
         {
-            var blogs = await _dbContext
-                .Blogs
+            var blogs = await _dbContext.Blogs
+                .Include(blog => blog.Categories)
                 .Where(blog => blog.CreatorId == request.CreatorId)
                 .OrderByDescending(blog => blog.Created)
                 .ProjectTo<BlogLookupDto>(_mapper.ConfigurationProvider)

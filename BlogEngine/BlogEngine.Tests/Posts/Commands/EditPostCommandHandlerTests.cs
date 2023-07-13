@@ -20,7 +20,7 @@ namespace BlogEngine.Tests.Posts.Commands
         {
             // Arrange
             var handler = new EditPostCommandHandler(Context);
-            var newTags = new List<PostTag>();
+            var newTags = new List<Tag>();
             var newContent = "Edited";
             var newTitle = "New title";
             // Act

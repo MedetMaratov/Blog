@@ -25,8 +25,8 @@ namespace BlogEngineApplication.Blogs.Queries.GetBlogsList.ByName
         public async Task<BlogListVM> Handle(GetBlogsListBuNameQuery request,
             CancellationToken cancellationToken)
         {
-            var blogs = await _dbContext
-                .Blogs
+            var blogs = await _dbContext.Blogs
+                .Include(blog => blog.Categories)
                 .Where(blog => blog.Name == request.Name)
                 .OrderByDescending(blog => blog.Created)
                 .ProjectTo<BlogLookupDto>(_mapper.ConfigurationProvider)
