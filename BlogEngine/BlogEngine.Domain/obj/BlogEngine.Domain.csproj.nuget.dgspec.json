@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {}
+    "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
+    "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
         "projectName": "BlogEngine.Domain",
-        "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
+        "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",

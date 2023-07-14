@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B1xYJ/70M5Vhq4XSJxBEvVBVuOALcoB9ugG+POhYDQU=",
+  "Hash": "FVJYI4q/MGZDzO6CIQzGbFzkHB5HOkTgddhdreplMWU=",
   "Source": "BlogEngine.Web",
   "BasePath": "_content/BlogEngine.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BlogEngine.Web\\wwwroot",
       "Source": "BlogEngine.Web",
-      "ContentRoot": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\",
       "BasePath": "_content/BlogEngine.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\favicon.ico",
       "SourceId": "BlogEngine.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\wwwroot\\",
       "BasePath": "_content/BlogEngine.Web",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj": {}
+    "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
+    "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
         "projectName": "BlogEngine.Domain",
-        "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
+        "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj": {
+    "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj",
         "projectName": "BlogEngine.Persistence",
-        "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj",
+        "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
-                "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj"
+              "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
+                "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj"
               }
             }
           }
@@ -138,14 +138,14 @@
         }
       }
     },
-    "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj": {
+    "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
         "projectName": "BlogEngine.Web",
-        "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
+        "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\obj\\",
+        "outputPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -162,11 +162,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj"
+              "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj"
               },
-              "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
-                "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj"
+              "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
+                "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj"
               }
             }
           }
@@ -223,14 +223,14 @@
         }
       }
     },
-    "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
+    "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
         "projectName": "BlogEngineApplication",
-        "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
+        "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\obj\\",
+        "outputPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -247,8 +247,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
-                "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj"
+              "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
+                "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj"
               }
             }
           }

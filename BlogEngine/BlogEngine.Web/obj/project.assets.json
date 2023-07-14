@@ -4150,11 +4150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
       "projectName": "BlogEngine.Web",
-      "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
+      "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\BlogEngine.Web.csproj",
       "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Web\\obj\\",
+      "outputPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4171,11 +4171,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj"
+            "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj"
             },
-            "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
-              "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj"
+            "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj": {
+              "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q+viaIU7gsYnWan5ggYgKkEqEcbaHRNOaWYpJEBCWWkh4+zKRf8MauTFYth6f1APDVMrSwe4osw72Ugg5d/11g==",
+  "dgSpecHash": "pyX3YtxfJ+W+1DAsk9Q5iRC9ejJfFSZXa74X26LdWZvyPxyApPjhj1AIZfWp0BLOXtC580QdOxn23gXUJqzIzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Persistence\\BlogEngine.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Администратор\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

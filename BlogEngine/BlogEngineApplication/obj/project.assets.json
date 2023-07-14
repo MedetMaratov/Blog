@@ -823,11 +823,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
       "projectName": "BlogEngineApplication",
-      "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
+      "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\BlogEngineApplication.csproj",
       "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngineApplication\\obj\\",
+      "outputPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngineApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -844,8 +844,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
-              "projectPath": "C:\\Users\\Администратор\\source\\repos\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj"
+            "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj": {
+              "projectPath": "C:\\Users\\Администратор\\Desktop\\Blog\\BlogEngine\\BlogEngine.Domain\\BlogEngine.Domain.csproj"
             }
           }
         }
