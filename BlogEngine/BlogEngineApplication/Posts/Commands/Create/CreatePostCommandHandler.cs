@@ -9,10 +9,12 @@ namespace BlogEngineApplication.Posts.Commands.Create
     public class CreatePostCommandHandler : IRequestHandler<CreatePostCommand, Guid>
     {
         private readonly IBlogDbContext _dbContext;
+        private readonly ITagService _tagService;
 
-        public CreatePostCommandHandler(IBlogDbContext dbContext)
+        public CreatePostCommandHandler(IBlogDbContext dbContext, ITagService tagService)
         {
             _dbContext = dbContext;
+            _tagService = tagService;
         }
 
         public async Task<Guid> Handle(CreatePostCommand request,
@@ -41,22 +43,7 @@ namespace BlogEngineApplication.Posts.Commands.Create
                 Tags = new List<Tag>()
             };
 
-            foreach (var tag in request.TagTitles)
-            {
-                var existingTag = await _dbContext.Tags.FirstOrDefaultAsync(t => t.Title == tag);
-                if (existingTag != null)
-                {
-                    post.Tags.Add(existingTag); 
-                }
-                else
-                {
-                    var newTag = new Tag
-                    {
-                        Title = tag
-                    };
-                    post.Tags.Add(newTag); 
-                }
-            }
+            await _tagService.AddTags(post, request.TagTitles);
             await _dbContext.Posts.AddAsync(post);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return post.Id;

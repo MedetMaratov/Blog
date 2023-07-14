@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using BlogEngine.Domain.Entities;
 using BlogEngine.Web.Models;
 using BlogEngineApplication.Categories.Create;
+using BlogEngineApplication.Categories.Get;
 using BlogEngineApplication.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +26,14 @@ namespace BlogEngine.Web.Controllers
             var command = _mapper.Map<CreateCategoryCommand>(createCategoryDto);
             var categoryId = await _mediator.Send(command);
             return Ok(categoryId);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Category>>> Get()
+        {
+            var query = new GetAllCategoriesQuery();
+            var vm = await _mediator.Send(query);
+            return Ok(vm);
         }
     }
 }

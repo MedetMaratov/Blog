@@ -14,10 +14,12 @@ namespace BlogEngineApplication.Posts.Commands.Edit
     public class EditPostCommandHandler : IRequestHandler<EditPostCommand>
     {
         private readonly IBlogDbContext _dbContext;
+        private readonly ITagService _tagService;
 
-        public EditPostCommandHandler(IBlogDbContext dbContext)
+        public EditPostCommandHandler(IBlogDbContext dbContext, ITagService tagService)
         {
             _dbContext = dbContext;
+            _tagService = tagService;   
         }
 
         public async Task Handle(EditPostCommand request, CancellationToken cancellationToken)
@@ -35,23 +37,8 @@ namespace BlogEngineApplication.Posts.Commands.Edit
             postToEdit.Content = request.Content;
             postToEdit.EditedAt = DateTime.Now;
             postToEdit.Tags = new List<Tag>();
-            foreach (var tag in request.Tags)
-            {
-                var existingTag = await _dbContext.Tags.FirstOrDefaultAsync(t => t.Title == tag);
-                if (existingTag != null)
-                {
-                    postToEdit.Tags.Add(existingTag);
-                }
-                else
-                {
-                    var newTag = new Tag
-                    {
-                        Title = tag
-                    };
-                    postToEdit.Tags.Add(newTag);
-                }
-            }
-            
+            await _tagService.AddTags(postToEdit, request.Tags);
+
             await _dbContext.SaveChangesAsync(cancellationToken);
         }
     }

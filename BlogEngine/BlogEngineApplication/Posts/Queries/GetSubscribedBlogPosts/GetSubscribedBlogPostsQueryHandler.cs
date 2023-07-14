@@ -26,13 +26,17 @@ namespace BlogEngineApplication.Posts.Queries.GetSubscribedBlogPosts
         public async Task<PostListVM> Handle(GetSubscribedBlogPostsQuery request,
             CancellationToken cancellationToken)
         {
-            var subscribedPosts = await _dbContext.Blogs
-                .Where(b => b.Id == request.BlogId
-                && b.Subscriptions.Any(sub => sub.UserId == request.UserId))
-                .SelectMany(blog => blog.Posts)
+            var subscribedBlogIds = await _dbContext.Subsсriptions
+           .Where(s => s.UserId == request.UserId)
+           .Select(s => s.BlogId)
+           .ToListAsync(cancellationToken);
+
+            var posts = await _dbContext.Posts
+                .Where(p => subscribedBlogIds.Contains(p.BlogId))
                 .ProjectTo<PostLookUpDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
-            return new PostListVM { Posts = subscribedPosts };
+
+            return new PostListVM { Posts = posts };
         }
     }
 }

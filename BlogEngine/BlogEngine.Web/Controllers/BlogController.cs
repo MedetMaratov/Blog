@@ -7,6 +7,7 @@ using BlogEngineApplication.Blogs.Commands.EditBlog;
 using BlogEngineApplication.Blogs.Queries.GetBlogDetails;
 using BlogEngineApplication.Blogs.Queries.GetBlogsList;
 using BlogEngineApplication.Blogs.Queries.GetBlogsList.All;
+using BlogEngineApplication.Blogs.Queries.GetBlogsList.ByCategory;
 using BlogEngineApplication.Blogs.Queries.GetBlogsList.ByCreator;
 using BlogEngineApplication.Blogs.Queries.GetBlogsList.ByName;
 using BlogEngineApplication.Blogs.Queries.GetBlogsList.Subscribed;
@@ -61,6 +62,18 @@ namespace BlogEngine.Web.Controllers
             var query = new GetBlogsListByCreatorQuery
             {
                 CreatorId = CreatorId
+            };
+            var vm = await _mediator.Send(query);
+            return Ok(vm);
+        }
+
+        [HttpGet()]
+        public async Task<ActionResult<BlogListVM>> GetByCategory([FromBody] GetBlogByCategoryDto categoriesDto)
+        {
+            var query = new GetBlogListByCategoryQuery
+            {
+                IncludedCategories = categoriesDto.IncludedCategories,
+                ExcludedCategories= categoriesDto.ExcludedCategories
             };
             var vm = await _mediator.Send(query);
             return Ok(vm);

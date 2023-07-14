@@ -5,8 +5,10 @@ using BlogEngineApplication.Posts.Commands.Create;
 using BlogEngineApplication.Posts.Commands.Delete;
 using BlogEngineApplication.Posts.Commands.Edit;
 using BlogEngineApplication.Posts.Queries;
+using BlogEngineApplication.Posts.Queries.GetByTags;
 using BlogEngineApplication.Posts.Queries.GetPostByBlogId;
 using BlogEngineApplication.Posts.Queries.GetPostDetails;
+using BlogEngineApplication.Posts.Queries.GetSubscribedBlogPosts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,7 +39,30 @@ namespace BlogEngine.Web.Controllers
         [HttpGet("{blogId}")]
         public async Task<ActionResult> GetAllByBlogId(Guid blogId)
         {
-            var query = new GetPostsByBlogIdQuery() { BlogId= blogId };
+            var query = new GetPostsByBlogIdQuery() { BlogId = blogId };
+            var vm = await _mediator.Send(query);
+            return Ok(vm);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetSubscribed()
+        {
+            var query = new GetSubscribedBlogPostsQuery()
+            {
+                UserId = UserId
+            };
+            var vm = await _mediator.Send(query);
+            return Ok(vm);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetByTags([FromBody] GetPostsByTagsDto tagsDto)
+        {
+            var query = new GetPostsByTagsQuery()
+            {
+                IncludedTags = tagsDto.IncludedTags,
+                ExcludedTags = tagsDto.ExcludedTags
+            };
             var vm = await _mediator.Send(query);
             return Ok(vm);
         }

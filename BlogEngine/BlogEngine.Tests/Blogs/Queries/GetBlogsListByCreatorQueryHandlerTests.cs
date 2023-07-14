@@ -33,7 +33,7 @@ namespace BlogEngine.Tests.Blogs.Queries
             var handler = new GetBlogsListByCreatorQueryHandler(_context, _mapper);
 
             // Act
-            var result = await handler.Handle(new GetBlogsListByCreatorQuery
+            var result = await handler.Handle(new GetBlogsListByCategoryQuery
             {
                 CreatorId = ContextFactory.UserAId
             }, CancellationToken.None);
