@@ -5,8 +5,10 @@ This is an ASP.NET Core REST API project that provides functionality for creatin
   <li>Asp.net core</li>
   <li>SQL Server</li>
   <li>Entity Framework Core</li>
+  <li>XUnit</li>
   <li>AutoMapper</li>
   <li>MediatR</li>
+  <li>AutoFixture</li>
 </ul>
 
 ## Actions

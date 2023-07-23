@@ -25,16 +25,18 @@ namespace BlogEngineApplication.Comments.Commands.Delete
         {
             var postWithComment = await _dbContext
                 .Posts
-                .FirstOrDefaultAsync(post => post.Id == request.PostId, cancellationToken);
-            if (postWithComment != null)
+                .FirstOrDefaultAsync(post => post.Id == request.PostId, cancellationToken);            
+            var comment = _dbContext
+                .Comments
+                .FirstOrDefault(comment => comment.Id == request.CommentId);
+            if (comment == null)
             {
                 throw new NotFoundException(nameof(Post), request.PostId);
             }
-            var comment = _dbContext
-                .Comments
-                .Where(comment => comment.UserId == request.UserId)
-                .FirstOrDefault(comment => comment.Id == request.CommentId);
-            postWithComment.Comments.Remove(comment);
+            if (comment.UserId != request.UserId)
+            {
+                throw new NotPermissionException("You do not have permission to perform this action.");
+            }
             _dbContext.Comments.Remove(comment);
             await _dbContext.SaveChangesAsync(cancellationToken);
         }

@@ -1,0 +1,46 @@
+2023-07-20 16:23:25.641 +06:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-20 16:23:25.972 +06:00 [INF] Executed DbCommand (140ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-20 16:23:26.619 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-20 16:23:27.364 +06:00 [INF] Now listening on: http://localhost:5000
+2023-07-20 16:23:27.369 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-20 16:23:27.369 +06:00 [INF] Hosting environment: Production
+2023-07-20 16:23:27.369 +06:00 [INF] Content root path: C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0
+2023-07-20 16:24:00.105 +06:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-07-20 16:24:01.809 +06:00 [INF] Executed DbCommand (1,647ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-07-20 16:24:02.151 +06:00 [INF] User profile is available. Using 'C:\Users\Администратор\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-20 16:24:02.265 +06:00 [INF] Now listening on: http://localhost:5000
+2023-07-20 16:24:02.269 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-20 16:24:02.269 +06:00 [INF] Hosting environment: Production
+2023-07-20 16:24:02.269 +06:00 [INF] Content root path: C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0

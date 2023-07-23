@@ -5,7 +5,7 @@ using BlogEngineApplication.Common.Mapping;
 
 namespace BlogEngine.Web.Models
 {
-    public class EditBlogDto : IMapWith<EditeBlogCommand>
+    public class EditBlogDto : IMapWith<EditBlogCommand>
     {
         public Guid UserId { get; set; }
         public Guid BlogId { get; set; }
@@ -16,7 +16,7 @@ namespace BlogEngine.Web.Models
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<EditBlogDto, EditeBlogCommand>()
+            profile.CreateMap<EditBlogDto, EditBlogCommand>()
           .ForMember(dest => dest.BlogId, opt => opt.MapFrom(src => src.BlogId))
           .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
           .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))

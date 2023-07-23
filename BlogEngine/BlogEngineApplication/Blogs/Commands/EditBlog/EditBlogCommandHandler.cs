@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Blogs.Commands.EditBlog
 {
-    public class EditBlogCommandHandler : IRequestHandler<EditeBlogCommand>
+    public class EditBlogCommandHandler : IRequestHandler<EditBlogCommand>
     {
         private readonly IBlogDbContext _dbContext;
 
@@ -18,7 +18,7 @@ namespace BlogEngineApplication.Blogs.Commands.EditBlog
             _dbContext = dbContext;
         }
 
-        public async Task Handle(EditeBlogCommand request, CancellationToken cancellationToken)
+        public async Task Handle(EditBlogCommand request, CancellationToken cancellationToken)
         {
             var blogForEdit = await _dbContext.Blogs
                 .FindAsync(new object[] { request.BlogId }, cancellationToken);

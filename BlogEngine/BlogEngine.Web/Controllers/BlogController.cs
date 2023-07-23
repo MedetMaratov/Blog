@@ -102,7 +102,7 @@ namespace BlogEngine.Web.Controllers
         [HttpPut]
         public async Task<IActionResult> Update(EditBlogDto editeBlogDto)
         {
-            var query = _mapper.Map<EditeBlogCommand>(editeBlogDto);
+            var query = _mapper.Map<EditBlogCommand>(editeBlogDto);
             query.UserId = UserId;
             await _mediator.Send(query);
             return NoContent();

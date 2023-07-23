@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlogEngineApplication.Blogs.Commands.EditBlog
 {
-    public class EditeBlogCommand : IRequest
+    public class EditBlogCommand : IRequest
     {
         public Guid UserId { get; set; }
         public Guid BlogId { get; set; }

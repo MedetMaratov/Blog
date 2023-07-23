@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BlogEngine"
+    "\\BlogEngine",
+    "\\BlogEngine\\BlogEngine.Tests",
+    "\\BlogEngine\\BlogEngine.Tests\\Blogs",
+    "\\BlogEngine\\BlogEngine.Web"
   ],
+  "SelectedNode": "\\BlogEngine\\BlogEngine.Web\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
