@@ -178,3 +178,10 @@ C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\obj\D
 C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\obj\Debug\net7.0\BlogEngine.Web.pdb
 C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\obj\Debug\net7.0\BlogEngine.Web.genruntimeconfig.cache
 C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\obj\Debug\net7.0\ref\BlogEngine.Web.dll
+C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\obj\Debug\net7.0\BlogEngine.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\bin\Debug\net7.0\BlogEngine.Web.xml
+C:\Users\Администратор\Desktop\Blog\BlogEngine\BlogEngine.Web\obj\Debug\net7.0\BlogEngine.Web.xml

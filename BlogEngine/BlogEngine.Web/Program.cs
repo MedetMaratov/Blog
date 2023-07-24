@@ -35,7 +35,12 @@ services.AddCors(options =>
 });
 services.AddSingleton<ICurrentUserService, CurrentUserService>();
 services.AddHttpContextAccessor();
-
+services.AddSwaggerGen(config =>
+{
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    config.IncludeXmlComments(xmlPath);
+});
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .WriteTo.File("Logs/BlogWebAppLog-.txt", rollingInterval: RollingInterval.Day)
@@ -55,6 +60,12 @@ using (var scope = app.Services.CreateScope())
         Log.Fatal(exception, "An error occured while app initialization");
     }
 }
+app.UseSwagger();
+app.UseSwaggerUI(config =>
+{
+    config.RoutePrefix = string.Empty;
+    config.SwaggerEndpoint("swagger/v1/swagger.json", "Blog API");
+});
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseRouting();
